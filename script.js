@@ -28,18 +28,10 @@ function dailyReports(data) {
     data.forEach((item, index) => {
             h2Elements[index].textContent = item.timeframes.daily.current + ' hrs ';
             weekElements[index].textContent = ' Previous ' + item.timeframes.daily.previous + ' hrs ';
-
-            daily.style.color = "white"
-            daily.style.fontWeight = "500"
-            daily.style.fontSize = "22px"
-
-            weekly.style.color = "";
-            weekly.style.fontWeight = "";
-            weekly.style.fontSize = "";
-
-            monthly.style.color = "";
-            monthly.style.fontWeight = "";
-            monthly.style.fontSize = "";
+            daily.style.cssText = "color: white; font-weight: 500; font-size: 22px;";
+            weekly.style.cssText = "";
+            monthly.style.cssText = "";
+            
     });
 }
 function weeklyReposrts(data) {
@@ -48,17 +40,9 @@ function weeklyReposrts(data) {
     data.forEach((item, index) => {
         weekElements[index].textContent =  `Last Week - ${item.timeframes.weekly.current} hrs `;
         h2Elements[index].textContent = item.timeframes.weekly.previous + ' hrs ';
-        weekly.style.color = "white";
-        weekly.style.fontWeight = "500";
-        weekly.style.fontSize = "22px";
-
-        daily.style.color = "";
-        daily.style.fontWeight = "";
-        daily.style.fontSize = "";
-
-        monthly.style.color = "";
-        monthly.style.fontWeight = "";
-        monthly.style.fontSize = "";
+        weekly.style.cssText = "color: white; font-weight: 500; font-size: 22px;";
+        daily.style.cssText = "";
+        monthly.style.cssText = "";
     });
 }
     function monthlyReports(data) {
@@ -67,16 +51,8 @@ function weeklyReposrts(data) {
         data.forEach((item, index) => {
             weekElements[index].textContent =  `Last Months - ${item.timeframes.monthly.current} hrs `;
             h2Elements[index].textContent = item.timeframes.monthly.previous + ' hrs ';
-            weekly.style.color = "";
-            weekly.style.fontWeight = "";
-            weekly.style.fontSize = "";
-    
-            daily.style.color = "";
-            daily.style.fontWeight = "";
-            daily.style.fontSize = "";
-
-            monthly.style.color = "white";
-            monthly.style.fontWeight = "500";
-            monthly.style.fontSize = "22px";
+            monthly.style.cssText = "color: white; font-weight: 500; font-size: 22px;";
+            daily.style.cssText = "";
+            weekly.style.cssText = "";
         });
     }

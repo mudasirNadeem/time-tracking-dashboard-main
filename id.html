@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="red">Red</button>
+<button id="green">Green</button>
+<button id="blue">Blue</button>
+    <div id="screen" style="width: 300px; height: 300px;"></div>
+<script>
+    const screen = document.getElementById('screen');
+const buttons = document.querySelectorAll('button');
+
+buttons.forEach((button) => {
+  button.addEventListener('click', (e) => {
+    var gatedId = document.getElementById(e.target.id)
+    if(gatedId.id === 'red'){
+    screen.style.backgroundColor = "red";
+  }
+    else if(gatedId.id === "green"){
+    screen.style.backgroundColor = "green";
+  }
+  else if(gatedId.id === "blue"){
+    screen.style.backgroundColor = "blue";
+  }
+  else{
+    screen.style.backgroundColor = "white";
+  }
+  });
+  
+});
+</script>
+</body>
+</html>
